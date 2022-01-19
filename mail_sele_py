@@ -1,0 +1,17 @@
+from selenium import webdriver
+import time
+
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get('http://www.gmail.com/')
+time.sleep(5)
+eid = driver.find_element_by_xpath('//*[@id="identifierId"]')
+eid.send_keys('mupendra00@gmail.com')
+time.sleep(3)
+go = driver.find_element_by_xpath('//*[@id="identifierNext"]/div/button/span')
+go.click()
+time.sleep(5)
+
+
+
+driver.close()
